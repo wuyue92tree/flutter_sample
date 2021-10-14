@@ -8,6 +8,13 @@ class UnknownPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.find<UnknownController>();
 
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Unknown Page'.tr),
+      ),
+      body: Center(
+        child: Text('Unknown Page'.tr),
+      ),
+    );
   }
 }

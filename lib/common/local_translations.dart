@@ -8,6 +8,7 @@ class LocalTranslations extends Translations {
           'chinese': '中文',
           'languageChange': '字体切换',
           'language change': '字体切换',
+          'Unknown Page': '未知页面',
           'follow system': '跟随系统',
           'Flutter Sample': 'Flutter 示例',
           'Welcome: ': '欢迎：',
