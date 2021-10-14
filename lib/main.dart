@@ -2,10 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_sample/routes/app_pages.dart';
 import 'package:get/get.dart';
+import 'package:flutter_sample/di.dart';
 
 import 'generated/l10n.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // init storage service
+  await DenpendencyInjection.init();
   runApp(MyApp());
 }
 
