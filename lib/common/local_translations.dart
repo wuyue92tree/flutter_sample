@@ -12,7 +12,7 @@ class LocalTranslations extends Translations {
           'themeChange': '主题切换',
           'theme change': '主题切换',
           'follow system': '跟随系统',
-          'light mode': '明亮模式',
+          'light mode': '浅色模式',
           'dark mode': '深色模式',
           'Flutter Sample': 'Flutter 示例',
           'Welcome: ': '欢迎：',
