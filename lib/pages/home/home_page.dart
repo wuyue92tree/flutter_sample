@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sample/commons/constats/constants.dart';
+import 'package:flutter_sample/generated/l10n.dart';
 import 'package:get/get.dart';
 
 import 'home_controller.dart';
@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(appName),
+        title: Text(S.of(context).appName),
       ),
       body: Center(
         child: Text("主页"),
