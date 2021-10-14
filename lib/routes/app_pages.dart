@@ -8,7 +8,7 @@ import 'app_routes.dart';
 import 'package:flutter_sample/pages/unknown/unknown_page.dart';
 
 class AppPages {
-  static final initialRoute = AppRoutes.home;
+  static final initialRoute = AppRoutes.welcome;
   static final unknownRoute = GetPage(
     name: AppRoutes.unknown,
     page: () => (UnknownPage()),
