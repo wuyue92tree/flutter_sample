@@ -22,10 +22,14 @@ class MyApp extends StatelessWidget {
       initialRoute: AppPages.initialRoute,
       getPages: AppPages.routes,
       unknownRoute: AppPages.unknownRoute,
+
       // setup language
       translations: LocalTranslations(),
       locale: getCurrentLanguage(),
       fallbackLocale: Locale('en', ''),
+
+      // setup theme
+      theme: getCurrentTheme(),
     );
   }
 
@@ -38,5 +42,16 @@ class MyApp extends StatelessWidget {
       }
     }
     return Locale('en', '');
+  }
+
+  getCurrentTheme() {
+    // get current theme
+    String? currentTheme = StorageUtils().getTheme();
+    if (currentTheme != null) {
+      if (currentTheme == 'light') {
+        return ThemeData.light();
+      }
+    }
+    return ThemeData.dark();
   }
 }

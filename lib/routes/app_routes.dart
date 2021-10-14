@@ -3,4 +3,5 @@ class AppRoutes {
   static final home = "/home";
   static final unknown = "/unknown";
   static final languageChange = "/languageChange";
+  static final themeChange = "/themeChange";
 }

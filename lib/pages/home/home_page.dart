@@ -20,6 +20,12 @@ class HomePage extends StatelessWidget {
             onTap: () => {
               Get.toNamed(AppRoutes.languageChange),
             },
+          ),
+          ListTile(
+            title: Text("theme change".tr),
+            onTap: () => {
+              Get.toNamed(AppRoutes.themeChange),
+            },
           )
         ],
       ),

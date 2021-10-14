@@ -2,6 +2,8 @@ import 'package:flutter_sample/pages/home/home_binding.dart';
 import 'package:flutter_sample/pages/home/home_page.dart';
 import 'package:flutter_sample/pages/language_change/language_change_binding.dart';
 import 'package:flutter_sample/pages/language_change/language_change_page.dart';
+import 'package:flutter_sample/pages/theme_change/theme_change_binding.dart';
+import 'package:flutter_sample/pages/theme_change/theme_change_page.dart';
 import 'package:flutter_sample/pages/unknown/unknown_binding.dart';
 import 'package:flutter_sample/pages/welcome/welcome_binding.dart';
 import 'package:flutter_sample/pages/welcome/welcome_page.dart';
@@ -31,6 +33,11 @@ class AppPages {
       name: AppRoutes.languageChange,
       page: () => LanguageChangePage(),
       binding: LanguageChangeBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.themeChange,
+      page: () => ThemeChangePage(),
+      binding: ThemeChangeBinding(),
     ),
   ];
 }

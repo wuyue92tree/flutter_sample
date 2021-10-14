@@ -12,4 +12,12 @@ class StorageUtils {
   saveLanguage(String language) {
     return storage.setString(StorageConstants.language, language);
   }
+
+  String? getTheme() {
+    return storage.getString(StorageConstants.theme);
+  }
+
+  saveTheme(String theme) {
+    return storage.setString(StorageConstants.theme, theme);
+  }
 }
