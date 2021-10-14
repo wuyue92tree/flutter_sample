@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sample/generated/l10n.dart';
+import 'package:flutter_sample/routes/app_routes.dart';
 import 'package:get/get.dart';
 
 import 'home_controller.dart';
@@ -11,10 +11,17 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(S.of(context).appName),
+        title: Text("Flutter Sample".tr),
       ),
-      body: Center(
-        child: Text("主页"),
+      body: ListView(
+        children: [
+          ListTile(
+            title: Text("language change".tr),
+            onTap: () => {
+              Get.toNamed(AppRoutes.languageChange),
+            },
+          )
+        ],
       ),
     );
   }
