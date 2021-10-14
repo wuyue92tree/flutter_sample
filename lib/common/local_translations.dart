@@ -6,8 +6,8 @@ class LocalTranslations extends Translations {
         'zh_CN': {
           'english': '英文',
           'chinese': '中文',
-          'languageChange': '字体切换',
-          'language change': '字体切换',
+          'languageChange': '语言切换',
+          'language change': '语言切换',
           'Unknown Page': '未知页面',
           'themeChange': '主题切换',
           'theme change': '主题切换',

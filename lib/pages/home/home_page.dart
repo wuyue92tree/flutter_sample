@@ -17,12 +17,14 @@ class HomePage extends StatelessWidget {
         children: [
           ListTile(
             title: Text("language change".tr),
+            leading: Icon(Icons.language),
             onTap: () => {
               Get.toNamed(AppRoutes.languageChange),
             },
           ),
           ListTile(
             title: Text("theme change".tr),
+            leading: Icon(Icons.format_paint),
             onTap: () => {
               Get.toNamed(AppRoutes.themeChange),
             },
