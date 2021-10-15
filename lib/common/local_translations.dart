@@ -23,6 +23,12 @@ class LocalTranslations extends Translations {
           'Sensors': '传感器',
           'Sample for sensors': '传感器示例',
           'enable welcome page': '启用欢迎页面',
+          'unknown': '未知',
+          'charging': '充电中',
+          'discharging': '放电中',
+          'full': '已充满',
+          'safe mode': '省电模式',
+          'normal mode': '正常模式',
         },
       };
 }
