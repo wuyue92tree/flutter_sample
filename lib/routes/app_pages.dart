@@ -1,3 +1,5 @@
+import 'package:flutter_sample/pages/core/sensors/sensors_binding.dart';
+import 'package:flutter_sample/pages/core/sensors/sensors_page.dart';
 import 'package:flutter_sample/pages/home/home_binding.dart';
 import 'package:flutter_sample/pages/home/home_page.dart';
 import 'package:flutter_sample/pages/setting/language_change/language_change_binding.dart';
@@ -31,6 +33,7 @@ class AppPages {
       page: () => HomePage(),
       binding: HomeBinding(),
     ),
+    // settings
     GetPage(
       name: AppRoutes.setting,
       page: () => SettingPage(),
@@ -47,6 +50,12 @@ class AppPages {
           binding: ThemeChangeBinding(),
         ),
       ],
+    ),
+    // sensors
+    GetPage(
+      name: AppRoutes.sensors,
+      page: () => SensorsPage(),
+      binding: SensorsBinding(),
     ),
   ];
 }

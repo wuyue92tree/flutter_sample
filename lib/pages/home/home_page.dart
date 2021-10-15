@@ -23,6 +23,13 @@ class HomePage extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          ListTile(
+            leading: Icon(Icons.sensors),
+            title: Text('sensors'.tr),
+            onTap: () => {
+              Get.toNamed(AppRoutes.sensors),
+            },
+          )
         ],
       ),
     );

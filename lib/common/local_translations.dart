@@ -18,6 +18,10 @@ class LocalTranslations extends Translations {
           'Welcome: ': '欢迎：',
           'skip': '跳过',
           'Home Page': '首页',
+          'Setting': '设置',
+          'sensors': '传感器',
+          'Sensors': '传感器',
+          'Sample for sensors': '传感器示例',
         },
       };
 }

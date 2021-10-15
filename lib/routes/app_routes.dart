@@ -6,4 +6,6 @@ class AppRoutes {
   static final setting = "/setting";
   static final languageChange = setting + "/languageChange";
   static final themeChange = setting + "/themeChange";
+
+  static final sensors = "/sensors";
 }
