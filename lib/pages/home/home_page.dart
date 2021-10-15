@@ -12,23 +12,17 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Flutter Sample".tr),
+        actions: [
+          IconButton(
+            onPressed: () => {
+              Get.toNamed(AppRoutes.setting),
+            },
+            icon: Icon(Icons.settings),
+          ),
+        ],
       ),
       body: ListView(
         children: [
-          ListTile(
-            title: Text("language change".tr),
-            leading: Icon(Icons.language),
-            onTap: () => {
-              Get.toNamed(AppRoutes.languageChange),
-            },
-          ),
-          ListTile(
-            title: Text("theme change".tr),
-            leading: Icon(Icons.format_paint),
-            onTap: () => {
-              Get.toNamed(AppRoutes.themeChange),
-            },
-          )
         ],
       ),
     );
