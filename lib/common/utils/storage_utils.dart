@@ -1,4 +1,5 @@
 import 'package:flutter_sample/common/constants/constants.dart';
+import 'package:flutter_sample/common/constants/storage_constants.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -19,5 +20,14 @@ class StorageUtils {
 
   saveTheme(String theme) {
     return storage.setString(StorageConstants.theme, theme);
+  }
+
+  bool? getEnableWelcomePage() {
+    return storage.getBool(StorageConstants.enableWelcomePage);
+  }
+
+  setEnableWelcomePage(bool enableWelcomePage) {
+    return storage.setBool(
+        StorageConstants.enableWelcomePage, enableWelcomePage);
   }
 }

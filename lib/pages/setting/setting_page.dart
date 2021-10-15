@@ -13,24 +13,37 @@ class SettingPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Setting'.tr),
       ),
-      body: ListView(
-        children: [
-          ListTile(
-            title: Text("language change".tr),
-            leading: Icon(Icons.language),
-            onTap: () => {
-              Get.toNamed(AppRoutes.languageChange),
-            },
-          ),
-          ListTile(
-            title: Text("theme change".tr),
-            leading: Icon(Icons.format_paint),
-            onTap: () => {
-              Get.toNamed(AppRoutes.themeChange),
-            },
-          ),
-        ],
-      ),
+      body: Obx(() {
+        return ListView(
+          children: [
+            ListTile(
+              title: Text("language change".tr),
+              leading: Icon(Icons.language),
+              onTap: () => {
+                Get.toNamed(AppRoutes.languageChange),
+              },
+            ),
+            ListTile(
+              title: Text("theme change".tr),
+              leading: Icon(Icons.format_paint),
+              onTap: () => {
+                Get.toNamed(AppRoutes.themeChange),
+              },
+            ),
+            ListTile(
+              title: Text('enable welcome page'.tr),
+              leading: Icon(Icons.web),
+              trailing: Switch(
+                value: controller.enableWelcomePage.value,
+                onChanged: (value) => {
+                  controller.enableWelcomePage.value = value,
+                  controller.welcomePageSwitchOnChanged()
+                },
+              ),
+            )
+          ],
+        );
+      }),
     );
   }
 }

@@ -22,6 +22,7 @@ class LocalTranslations extends Translations {
           'sensors': '传感器',
           'Sensors': '传感器',
           'Sample for sensors': '传感器示例',
+          'enable welcome page': '启用欢迎页面',
         },
       };
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sample/common/local_translations.dart';
 import 'package:flutter_sample/routes/app_pages.dart';
+import 'package:flutter_sample/routes/app_routes.dart';
 import 'package:get/get.dart';
 import 'package:flutter_sample/di.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: AppPages.initialRoute,
+      initialRoute: getInitialRoute(),
       getPages: AppPages.routes,
       unknownRoute: AppPages.unknownRoute,
 
@@ -53,5 +54,18 @@ class MyApp extends StatelessWidget {
       }
     }
     return ThemeData.dark();
+  }
+
+  String getInitialRoute() {
+    // add judge
+    // if enableWelcomePage is true: to /welcome
+    // else: to /home
+    bool? enableWelcomePage = StorageUtils().getEnableWelcomePage();
+    if (enableWelcomePage != null) {
+      if (enableWelcomePage == false) {
+        return AppRoutes.home;
+      }
+    }
+    return AppRoutes.welcome;
   }
 }
