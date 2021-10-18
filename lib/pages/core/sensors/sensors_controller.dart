@@ -15,8 +15,12 @@ class SensorsController extends GetxController {
         battery.value.onBatteryStateChanged.listen((BatteryState state) {
       batteryState.value = state;
     });
-    battery.value.batteryLevel;
-    battery.value.isInBatterySaveMode;
+  }
 
+  @override
+  void onClose() {
+    super.onClose();
+    // cancel batteryStateSubscription
+    batteryStateSubscription!.cancel();
   }
 }
