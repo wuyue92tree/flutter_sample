@@ -71,6 +71,41 @@ class SensorsPage extends StatelessWidget {
                   ),
                   ListTile(
                     title: Text('sensors_plus'.tr),
+                    subtitle: Text('accelerometer/userAccelerometer/gyroscope'.tr),
+                    onTap: () => {
+                      controller.enable_sensors_plus_event(),
+                      Get.defaultDialog(
+                        title: 'sensors_plus'.tr,
+                        content: Obx(() {
+                          return Container(
+                            child: Column(
+                              children: [
+                                Text('accelerometer: '.tr +
+                                    controller.accelerometerEvent.toString()),
+                                Text('userAccelerometer: '.tr +
+                                    controller.userAccelerometerEvent
+                                        .toString()),
+                                Text('gyroscope: '.tr +
+                                    controller.gyroscopeEvent.toString()),
+                              ],
+                            ),
+                          );
+                        }),
+                        barrierDismissible: false,
+                        cancel: TextButton(
+                          onPressed: () => {
+                            controller.disable_sensors_plus_event(),
+                            Navigator.pop(context),
+                          },
+                          child: Text('Close'.tr),
+                        ),
+                        onWillPop: () async {
+                          controller.disable_sensors_plus_event();
+                          return true;
+                        },
+                      ),
+                      // controller.call_sensors_plus(),
+                    },
                   ),
                 ],
               ),

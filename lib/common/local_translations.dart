@@ -29,6 +29,10 @@ class LocalTranslations extends Translations {
           'full': '已充满',
           'safe mode': '省电模式',
           'normal mode': '正常模式',
+          'accelerometer: ': '加速计: ',
+          'userAccelerometer: ': '用户加速计: ',
+          'gyroscope: ': '陀螺仪: ',
+          'accelerometer/userAccelerometer/gyroscope': '加速计/用户加速计/陀螺仪',
         },
       };
 }
